@@ -1,0 +1,57 @@
+Simple Shell
+
+Simple Shell is a command language interpreter that executes commands read from the standard input. It is a simplified version of the Bourne Again Shell (bash).
+
+Invocation
+
+Simple Shell can be invoked in two ways:
+
+Interactively: type ./simple_shell at the command line.
+Non-interactively: pipe a command to Simple Shell, for example echo "ls -l" | ./simple_shell.
+Command Execution
+
+When Simple Shell executes a command, it first splits the command into words. If the command contains no slashes, Simple Shell checks if there is a shell function with that name. If there is, the function is executed. If there is no shell function with that name, Simple Shell checks if the command is a built-in command. If it is, the built-in command is executed.
+
+If the command is neither a shell function nor a built-in command, Simple Shell searches the directories in the PATH environment variable for an executable file with that name. If an executable file is found, it is executed.
+
+Sample Functions
+
+Simple Shell comes with the following sample functions:
+
+echo: Prints the arguments to standard output, followed by a newline.
+ls: Lists the files in the current directory.
+pwd: Prints the current working directory.
+whereis: Prints the directory where a command or function can be found.
+Shell Builtin Commands
+
+Simple Shell also comes with the following shell builtin commands:
+
+cd: Changes the current directory.
+env: Prints the environment variables.
+exit: Exits Simple Shell.
+setenv: Creates or modifies an environment variable.
+unsetenv: Removes an environment variable.
+Examples
+
+To invoke Simple Shell, type ./simple_shell at the command line.
+
+To print the text "This is pretty cool!", type echo "This is pretty cool!" at the Simple Shell prompt.
+
+To list the files in the current directory, type ls at the Simple Shell prompt.
+
+To print the current working directory, type pwd at the Simple Shell prompt.
+
+To exit Simple Shell, type exit at the Simple Shell prompt.
+
+Bugs
+
+Simple Shell is still under development, and there may be some bugs. If you find a bug, please report it to the developers.
+
+See Also
+
+bash(1): The Bourne Again Shell
+sh(1): The Bourne Shell
+ksh(1): The Korn Shell
+csh(1): The C Shell
+Authors
+Alex Nduta and Fortunate Kio
